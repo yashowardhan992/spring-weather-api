@@ -24,6 +24,7 @@ public class WeatherController {
 
     @GetMapping(path = "/api/weather", produces = MediaType.APPLICATION_JSON_VALUE)
     @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "https://weather-data-5j7q.onrender.com")
     public ResponseEntity<String> getWeather(@RequestParam String city, @RequestParam String unit) {
         weatherService.setCityName(city);
         weatherService.setUnit(unit);
@@ -42,6 +43,7 @@ public class WeatherController {
 
     @GetMapping(path = "/api/weather/details", produces = MediaType.APPLICATION_JSON_VALUE)
     @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "https://weather-data-5j7q.onrender.com")
     public ResponseEntity<String> getWeatherDetails(@RequestParam String city, @RequestParam String unit) {
         weatherService.setCityName(city);
         weatherService.setUnit(unit);
