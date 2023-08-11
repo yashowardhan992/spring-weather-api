@@ -23,7 +23,7 @@ public class WeatherController {
     }
 
     @GetMapping(path = "/api/weather", produces = MediaType.APPLICATION_JSON_VALUE)
-    @CrossOrigin(origins = "https://react-weather-taupe.vercel.app")
+    @CrossOrigin(origins = "https://react-weather-three-ecru.vercel.app")
    
     public ResponseEntity<String> getWeather(@RequestParam String city, @RequestParam String unit) {
         weatherService.setCityName(city);
@@ -42,7 +42,7 @@ public class WeatherController {
     }
 
     @GetMapping(path = "/api/weather/details", produces = MediaType.APPLICATION_JSON_VALUE)
-    @CrossOrigin(origins = "https://react-weather-taupe.vercel.app")
+    @CrossOrigin(origins = "https://react-weather-three-ecru.vercel.app")
     
     public ResponseEntity<String> getWeatherDetails(@RequestParam String city, @RequestParam String unit) {
         weatherService.setCityName(city);
